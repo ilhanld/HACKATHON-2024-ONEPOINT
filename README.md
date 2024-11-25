@@ -28,12 +28,12 @@ Built with Express.js to manage API data and user requests
 ## 🛠️-Technologies used
 
 
-Front
+### Front
 ![](https://i.imgur.com/3kft7Zd.png)
 ![](https://i.imgur.com/pNTx16C.png)
 ![](https://i.imgur.com/LkswR1Y.png)
 
-Back
+### Back
 
 ![](https://i.imgur.com/xHz2AER.png)
 
