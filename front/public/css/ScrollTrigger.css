@@ -1,0 +1,15 @@
+.div_scroll_trigger {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+.div_scroll_trigger h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}

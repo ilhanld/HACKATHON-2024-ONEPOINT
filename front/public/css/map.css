@@ -1,0 +1,21 @@
+/* Conteneur principal de la carte */
+#map {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Conteneur de la carte */
+.map_container {
+    padding: 1rem;
+    margin: .625rem;
+    min-width: 300px;
+    height: 700px;
+    max-width: 785px; /* Limite maximale de la carte */
+    background-color: rgba(255, 255, 255, 0.37);
+    border-radius: 32px;
+    box-sizing: border-box; /* Pour gérer les marges et padding */
+}

@@ -1,0 +1,30 @@
+/* Conteneur principal avec le défilement horizontal */
+.scroll-container {
+    display: flex;
+    overflow-x: scroll; /* Active le défilement horizontal */
+    scroll-snap-type: x mandatory; /* Active le scroll snap horizontal obligatoire */
+    scroll-behavior: smooth;
+    align-content: center;
+    justify-content: center;/* Optionnel : défilement fluide */
+    gap: 10px; /* Optionnel : espace entre les éléments */
+    padding: 10px;/* Optionnel : espace autour des éléments */
+  }
+
+  /* Chaque élément qui sera aligné lors du défilement */
+  .scroll-item {
+    /* Empêche les éléments de s'étendre */
+    width: 300px; /* Largeur des éléments */
+    height: 200px; /* Hauteur des éléments */
+    background-color: #eee;
+    scroll-snap-align: start; /* Aligne chaque élément avec le début de la zone visible */
+    border-radius: 10px; /* Optionnel : coins arrondis */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  /* Optionnel : Style pour masquer les barres de défilement */
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }

@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Your custom CSS styles
+   ========================================================================== */
+   body{
+    min-height: 100vh;
+    margin-top: 100px;
+    background-color: rgb(54, 116, 46);
+    color: white;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   Your custom CSS styles for smartphones and screens smaller than 480 px
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+    /* insert styles here */
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Clearfix
+ * Adding a 'clearfix' class will allow parent elements to contain a floated child element
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    zoom: 1;
+}
+
+
+/* Section globale */
+.section {
+    position: relative;
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center;
+    gap: 1rem; /* Espace entre les deux colonnes */
+    background: rgba(0, 0, 0, 0.5); /* Ajout d'une légère transparence au-dessus de la vidéo */
+    color: white;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Pour s'assurer que la vidéo couvre toute la zone */
+    z-index: -1; /* Place la vidéo derrière le contenu */
+}
+.chatbot-container, .map_container {
+    position: relative;
+    z-index: 1; /* Place le contenu au-dessus de la vidéo */
+}
+
+/* --- Media Queries pour rendre la section responsive --- */
+
+/* Pour les grands écrans (bureau) */
+@media (min-width: 1024px) {
+    .section {
+        flex-direction: row;
+    }
+    .chatbot-container, .map_container {
+        width: 45%; /* Partage de la largeur de l'écran */
+        height: 700px; /* Garde la même hauteur */
+    }
+}
+
+/* Pour les tablettes */
+@media (max-width: 1023px) and (min-width: 768px) {
+    .section {
+        flex-direction: row;
+    }
+    .chatbot-container, .map_container {
+        width: 100%; /* Occupe 100% de la largeur */
+        height: 600px; /* Réduit un peu la hauteur */
+    }
+}
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 767px) {
+    .section {
+        flex-direction: row;
+    }
+    .chatbot-container, .map_container {
+        width: 100%; /* Largeur 100% */
+        height: auto; /* Hauteur ajustée automatiquement */
+    }
+    .map_container {
+        margin-bottom: 1rem; /* Ajoute de l'espace en dessous de la carte */
+    }
+}
